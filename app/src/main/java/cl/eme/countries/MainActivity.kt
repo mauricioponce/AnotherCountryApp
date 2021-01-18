@@ -25,10 +25,10 @@ import timber.log.Timber
 [X] corutinas (dependencias)
 [X] Repositorio
 [X] ViewModel (by viewModels()) -> Implementa el patrón factory
-[ ] Fragmento de listado
-    [ ] Layout de item list
-    [ ] Adapter + ViewHolder + RV
-    [ ] imágenes SVG
+[X] Fragmento de listado
+    [X] Layout de item list
+    [X] Adapter + ViewHolder + RV
+    [X] imágenes SVG
 [ ] Fragmento de detalle
 [ ] material design
 [ ] Navigation
