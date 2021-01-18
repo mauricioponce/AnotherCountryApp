@@ -13,13 +13,13 @@ import timber.log.Timber
     [X] dependencias
     [X] permiso de internet
 [ ] ROOM
-    [ ] Dao
-    [ ] cliente de base de datos
-    [ ] Entities
-    [ ] dependencias
+    [X] Dao
+    [X] cliente de base de datos
+    [X] Entities
+    [X] dependencias
     [ ] testing
-    [ ] subclase de application
-    [ ] type converters
+    [X] subclase de application -> agregar al manifest
+    [X] type converters (con testing)
 [ ] corutinas (dependencias)
 [ ] Repositorio
 [ ] ViewModel (by viewModels()) -> Implementa el patrón factory
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initLog()
+        Timber.d("onCreate")
     }
 
     private fun initLog() {
