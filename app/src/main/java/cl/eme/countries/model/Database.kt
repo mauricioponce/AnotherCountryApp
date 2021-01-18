@@ -10,14 +10,11 @@ interface CountryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(countries: List<Country>)
 
-    @Query("SELECT * FROM country")
-    fun getCountries(): LiveData<List<Country>>
-
     @Query("SELECT name, alpha2Code, region, flag FROM country")
     fun getMinimalCountries(): LiveData<List<MinimalCountry>>
 
     @Query("SELECT * FROM country WHERE alpha2Code=:code")
-    fun getCountryDetail(code: String): Country
+    fun getCountryDetail(code: String): LiveData<Country>
 }
 
 @Database(entities = [Country::class], version = 1)

@@ -1,12 +1,11 @@
 package cl.eme.countries.model
 
+import androidx.lifecycle.LiveData
 import timber.log.Timber
 
 class Repository {
 
     private val countryDao = CountryApplication.countryDatabase!!.countryDao()
-
-    val countries = countryDao.getCountries()
 
     val minimalCountries = countryDao.getMinimalCountries()
 
@@ -22,5 +21,9 @@ class Repository {
             }
             false -> Timber.e("${response.code()} - ${response.errorBody()}")
         }
+    }
+
+    fun getCountry(code: String): LiveData<Country> {
+        return countryDao.getCountryDetail(code)
     }
 }

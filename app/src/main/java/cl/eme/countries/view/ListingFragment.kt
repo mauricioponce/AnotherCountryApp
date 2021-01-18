@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.eme.countries.MyViewModel
 import cl.eme.countries.R
@@ -13,7 +13,8 @@ import cl.eme.countries.databinding.FragmentListingBinding
 import timber.log.Timber
 
 class ListingFragment: Fragment() {
-    private val viewModel: MyViewModel by viewModels()
+    private val viewModel: MyViewModel by activityViewModels()
+
     private lateinit var binding: FragmentListingBinding
 
     override fun onCreateView(
@@ -37,7 +38,9 @@ class ListingFragment: Fragment() {
         adapter.selectedItem().observe(viewLifecycleOwner, {
             Timber.d("item seleccionado es $it")
 
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container, DetailFragment())?.commit()
+            viewModel.selected(it)
+
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container, DetailFragment())?.addToBackStack("detail")?.commit()
         })
 
         return binding.root
