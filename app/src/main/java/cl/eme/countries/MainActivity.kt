@@ -29,7 +29,7 @@ import timber.log.Timber
     [X] Layout de item list
     [X] Adapter + ViewHolder + RV
     [X] imágenes SVG
-[ ] Fragmento de detalle
+[X] Fragmento de detalle
 [ ] material design
 [ ] Navigation
 [ ] Testing para la API -> convertir al repo
@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initLog() {
-        // TODO verificar la configuración
         Timber.plant(Timber.DebugTree())
     }
 

@@ -15,7 +15,7 @@ data class Country(
     val region: String,
     val subregion: String,
     val population: Long,
-    val latlng: List<Double>, // TODO cambiar a data class
+    val latlng: List<Double>,
     val demonym: String,
     val area: Double,
     val gini: Double,
@@ -23,11 +23,7 @@ data class Country(
     val borders: List<String>,
     val nativeName: String,
     val numericCode: String?,
-    //TODO @Embedded val currencies: List<Currency>,
     val flag: String
 )
-
-data class Currency(val code: String, val name: String, val symbol: String)
-
 
 data class MinimalCountry(val name: String, val alpha2Code: String, val region: String, val flag: String)
