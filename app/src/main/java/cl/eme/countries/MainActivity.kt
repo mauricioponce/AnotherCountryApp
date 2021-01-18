@@ -12,23 +12,22 @@ import timber.log.Timber
     [X] POJOs
     [X] dependencias
     [X] permiso de internet
-[ ] ROOM
+[X] ROOM
     [X] Dao
     [X] cliente de base de datos
     [X] Entities
     [X] dependencias
-    [ ] testing
     [X] subclase de application -> agregar al manifest
     [X] type converters (con testing)
-[ ] corutinas (dependencias)
-[ ] Repositorio
-[ ] ViewModel (by viewModels()) -> Implementa el patrón factory
-[ ] Testing a los mappers
+[X] corutinas (dependencias)
+[X] Repositorio
+[X] ViewModel (by viewModels()) -> Implementa el patrón factory
 [ ] Fragmento de listado
     [ ] Layout de item list
     [ ] Adapter + ViewHolder + RV
     [ ] imágenes SVG
 [ ] Fragmento de detalle
+[ ] material design
 [ ] Navigation
 [ ] Testing para la API -> convertir al repo
 */
