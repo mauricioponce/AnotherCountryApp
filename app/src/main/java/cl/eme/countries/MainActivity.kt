@@ -37,18 +37,12 @@ import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: MyViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initLog()
         Timber.d("onCreate")
-
-        viewModel.countries.observe(this, {
-            Timber.d("tengo la lista de ${it.size} paises")
-        })
 
         configCoil()
     }
