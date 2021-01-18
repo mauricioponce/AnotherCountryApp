@@ -59,6 +59,20 @@ class ConvertersTest {
     }
 
     @Test
+    fun list2Double_emptyList() {
+        // Given
+        val inputList = listOf<Double>()
+        val expected = ""
+
+        // When
+        val result = converter.list2Double(inputList)
+
+        // Then
+        assertThat(result).isNotNull()
+        assertThat(result).isEqualTo(expected)
+    }
+
+    @Test
     fun doubles2List() {
         // Given
         val inputString = "1.1, 2.2"
@@ -70,5 +84,18 @@ class ConvertersTest {
         assertThat(result).isNotNull()
         assertThat(result).hasSize(2)
         assertThat(result[1]).isEqualTo(2.2)
+    }
+
+    @Test
+    fun doubles2List_emptyString() {
+        // Given
+        val inputString = ""
+
+        // When
+        val result = converter.doubles2List(inputString)
+
+        // Then
+        assertThat(result).isNotNull()
+        assertThat(result).hasSize(0)
     }
 }

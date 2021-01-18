@@ -2,7 +2,7 @@ package cl.eme.countries
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewbinding.BuildConfig
+import androidx.activity.viewModels
 import timber.log.Timber
 
 /*
@@ -34,17 +34,24 @@ import timber.log.Timber
 */
 
 class MainActivity : AppCompatActivity() {
+
+    private val viewModel: MyViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initLog()
         Timber.d("onCreate")
+
+        viewModel.countries.observe(this, {
+            Timber.d("tengo la lista de ${it.size} paises")
+        })
+
     }
 
     private fun initLog() {
-        if(BuildConfig.DEBUG) {
-            Timber.plant(Timber.DebugTree())
-        }
+        // TODO verificar la configuración
+        Timber.plant(Timber.DebugTree())
     }
 }

@@ -22,10 +22,9 @@ data class Country(
     val timezones: List<String>,
     val borders: List<String>,
     val nativeName: String,
-    val numericCode: String,
+    val numericCode: String?,
     //TODO @Embedded val currencies: List<Currency>,
-    val flag: String,
-    val cioc: String
+    val flag: String
 )
 
 data class Currency(val code: String, val name: String, val symbol: String)

@@ -43,7 +43,13 @@ class Converters {
 
     @TypeConverter
     fun doubles2List(value: String): List<Double> {
-        return value.split(",").map { it.trim().toDouble() }
+        val result = mutableListOf<Double>()
+        value.split(",").forEach {
+            if (!it.isEmpty()) {
+                result.add(it.trim().toDouble())
+            }
+        }
+        return result
     }
 }
 
