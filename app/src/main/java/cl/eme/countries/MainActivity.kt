@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 /*
-[ ] Consumo de API
-    [ ] Interfaz de operaciones
-    [ ] cliente de retrofit
-    [ ] POJO
-    [ ] dependencias
-    [ ] permiso de internet
+[X] Consumo de API
+    [X] Interfaz de operaciones
+    [X] cliente de retrofit
+    [X] POJOs
+    [X] dependencias
+    [X] permiso de internet
 [ ] ROOM
     [ ] Dao
     [ ] cliente de base de datos
