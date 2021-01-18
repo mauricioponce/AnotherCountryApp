@@ -7,7 +7,7 @@ import timber.log.Timber
 
 @Dao
 interface CountryDao {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(countries: List<Country>)
 
     @Query("SELECT * FROM country")
