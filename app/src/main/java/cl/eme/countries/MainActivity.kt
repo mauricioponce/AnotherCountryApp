@@ -3,6 +3,9 @@ package cl.eme.countries
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import coil.Coil
+import coil.ImageLoader
+import coil.decode.SvgDecoder
 import timber.log.Timber
 
 /*
@@ -47,10 +50,21 @@ class MainActivity : AppCompatActivity() {
             Timber.d("tengo la lista de ${it.size} paises")
         })
 
+        configCoil()
     }
 
     private fun initLog() {
         // TODO verificar la configuración
         Timber.plant(Timber.DebugTree())
+    }
+
+    private fun configCoil() {
+        val context = this
+
+        Coil.setImageLoader(ImageLoader.Builder(context)
+            .componentRegistry {
+                add(SvgDecoder(context))
+            }
+            .build())
     }
 }

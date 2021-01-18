@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import cl.eme.countries.databinding.ItemListBinding
 import cl.eme.countries.model.MinimalCountry
+import coil.load
 
 class CountryAdapter : RecyclerView.Adapter<CountryVH>() {
 
@@ -31,5 +32,6 @@ class CountryAdapter : RecyclerView.Adapter<CountryVH>() {
 class CountryVH(val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(country: MinimalCountry) {
         binding.tvName.text = country.name
+        binding.ivFlag.load(country.flag)
     }
 }
