@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.eme.countries.MyViewModel
 import cl.eme.countries.R
@@ -40,7 +41,7 @@ class ListingFragment: Fragment() {
 
             viewModel.selected(it)
 
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container, DetailFragment())?.addToBackStack("detail")?.commit()
+            findNavController().navigate(R.id.action_listingFragment_to_detailFragment2)
         })
 
         return binding.root

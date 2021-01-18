@@ -30,8 +30,8 @@ import timber.log.Timber
     [X] Adapter + ViewHolder + RV
     [X] imágenes SVG
 [X] Fragmento de detalle
+[X] Navigation
 [ ] material design
-[ ] Navigation
 [ ] Testing para la API -> convertir al repo
 */
 
