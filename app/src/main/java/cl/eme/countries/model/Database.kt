@@ -13,6 +13,9 @@ interface CountryDao {
     @Query("SELECT * FROM country")
     fun getCountries(): LiveData<List<Country>>
 
+    @Query("SELECT name, alpha2Code, region, flag FROM country")
+    fun getMinimalCountries(): LiveData<List<MinimalCountry>>
+
     @Query("SELECT * FROM country WHERE alpha2Code=:code")
     fun getCountryDetail(code: String): Country
 }

@@ -12,6 +12,8 @@ class MyViewModel: ViewModel() {
 
     val countries = repository.countries
 
+    val minimalCountries = repository.minimalCountries
+
     init {
         Timber.d("give me tha countries")
         viewModelScope.launch {

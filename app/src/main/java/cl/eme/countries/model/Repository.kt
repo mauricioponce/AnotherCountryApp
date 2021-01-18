@@ -8,6 +8,8 @@ class Repository {
 
     val countries = countryDao.getCountries()
 
+    val minimalCountries = countryDao.getMinimalCountries()
+
     suspend fun getCountries() {
         Timber.d("getCountries from API")
         val response = RetrofitClient.instance().getCountries()

@@ -28,3 +28,6 @@ data class Country(
 )
 
 data class Currency(val code: String, val name: String, val symbol: String)
+
+
+data class MinimalCountry(val name: String, val alpha2Code: String, val region: String, val flag: String)
