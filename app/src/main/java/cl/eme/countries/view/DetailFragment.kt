@@ -13,7 +13,7 @@ import timber.log.Timber
 
 class DetailFragment : Fragment() {
 
-    lateinit var binding: FragmentDetailBinding
+    private lateinit var binding: FragmentDetailBinding
 
     private val viewModel: MyViewModel by activityViewModels()
 
@@ -21,7 +21,7 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         Timber.d("onCreateView")
 
         binding = FragmentDetailBinding.inflate(layoutInflater)

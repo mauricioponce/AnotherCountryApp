@@ -7,7 +7,7 @@ import org.junit.Before
 
 class ConvertersTest {
 
-    lateinit var converter: Converters
+    private lateinit var converter: Converters
 
     @Before
     fun setup() {

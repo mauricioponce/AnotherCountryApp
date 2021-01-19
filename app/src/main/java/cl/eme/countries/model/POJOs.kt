@@ -1,6 +1,5 @@
 package cl.eme.countries.model
 
-import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

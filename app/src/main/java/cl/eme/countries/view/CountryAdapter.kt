@@ -38,7 +38,7 @@ class CountryAdapter : RecyclerView.Adapter<CountryVH>() {
 
 }
 
-class CountryVH(val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
+class CountryVH(private val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(country: MinimalCountry) {
         binding.tvName.text = country.name
         binding.ivFlag.load(country.flag)

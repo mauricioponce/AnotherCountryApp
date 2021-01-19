@@ -2,7 +2,6 @@ package cl.eme.countries
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import coil.Coil
 import coil.ImageLoader
 import coil.decode.SvgDecoder
